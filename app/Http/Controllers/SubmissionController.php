@@ -12,14 +12,16 @@ class SubmissionController extends Controller
 {
     public function store(Request $request)
     {
+        
+        $submission = new Submission;
+        $submission->name = $request->name;
+        $submission->email = $request->email;
+        $submission->image = $request->image;
 
-         $validatedData = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-        ]);
+        if ($request->image->extension() != 'jpg' && $request->image->extension() != 'png') {
+            return response()->json(['message' => 'Image must be a jpg or png file'], 400);
+        }
 
-        $submission = Submission::create($validatedData); // Create a new Submission
         $submission->confirmation_token = bin2hex(random_bytes(32)); // Generate a random confirmation token
         
         // save the image to subdirectory images
@@ -37,9 +39,7 @@ class SubmissionController extends Controller
             return response()->json(['message' => 'Failed to create submission. Please try again later.', 'errors' => $submission->errors()], 503);
         }
 
-        // Implement additional logic for confirmation token, approval, etc. (optional)
-
-        //return redirect('/submissions')->with('success', 'Submission created successfully!'); // Redirect with a success message
+       return response()->json(['message' => 'whoops, something is not right here'], 500);
     }
 
     public function update(Request $request, $id)

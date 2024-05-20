@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['POST'],
 
-    'allowed_origins' => ['kijkgat.com'],
+    'allowed_origins' => ['kijkgat.com', '127.0.0.1:8000'],
 
     'allowed_origins_patterns' => [],
 

@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 
 Route::get('/submissions', [SubmissionController::class, 'index'])->name('submissions.index');
-Route::post('/submissions', [SubmissionController::class, 'store'])->name('submissions.store');
+Route::post('/submissions/new', [SubmissionController::class, 'store'])->name('submissions.store');
 
 // create a route for submissons allow
 Route::get('/submissions/allow/{id}', [SubmissionController::class, 'allow'])->name('submissions.allow');
