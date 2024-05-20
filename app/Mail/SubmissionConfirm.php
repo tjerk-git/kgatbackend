@@ -26,7 +26,7 @@ class SubmissionConfirm extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('info@kijkgat.com', 'Kijkgat'),
+            from: new Address('mail@kijkgat.com', 'Kijkgat'),
             subject: 'Inzending KIJKGAT bevestigen',
         );
     }
