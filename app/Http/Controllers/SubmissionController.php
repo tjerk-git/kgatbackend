@@ -18,9 +18,9 @@ class SubmissionController extends Controller
         $submission->email = $request->email;
         $submission->image = $request->image;
 
-        if ($request->image->extension() != 'jpg' && $request->image->extension() != 'png') {
-            return response()->json(['message' => 'Image must be a jpg or png file'], 400);
-        }
+        // if ($request->image->extension() != 'jpg' && $request->image->extension() != 'png') {
+        //     return response()->json(['message' => 'Image must be a jpg or png file'], 400);
+        // }
 
         $submission->confirmation_token = bin2hex(random_bytes(32)); // Generate a random confirmation token
         
