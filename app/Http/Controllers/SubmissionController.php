@@ -55,6 +55,11 @@ class SubmissionController extends Controller
         ]);
     }
 
+    public function show(Request $request, $id){
+        $submission = Submission::find($id);
+        return view('submissions.show', compact('submission'));
+    }
+
     public function index()
     {
         // Add code to retrieve and display all submissions

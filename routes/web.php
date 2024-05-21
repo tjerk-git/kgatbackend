@@ -4,13 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubmissionController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 
 
 Route::get('/submissions', [SubmissionController::class, 'index'])->name('submissions.index');
 Route::post('/submissions/new', [SubmissionController::class, 'store'])->name('submissions.store');
+
+Route::get('/submissions/show/{id}', [SubmissionController::class, 'show'])->name('submissions.show');
 
 // create a route for submissons allow
 Route::get('/submissions/allow/{id}', [SubmissionController::class, 'allow'])->name('submissions.allow');
