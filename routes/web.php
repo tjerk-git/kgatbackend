@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubmissionController;
 
 Route::get('/', function () {
-    return view('index');
+    // get all allowed submissions
+    $submissions = \App\Models\Submission::where('is_approved', 1)->get();
+
+    return view('index', compact('submissions'));
 });
 
 

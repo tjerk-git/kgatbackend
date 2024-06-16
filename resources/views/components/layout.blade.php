@@ -7,6 +7,10 @@
     <title>Kijkgat | Zie wat je nog niet zag</title>
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/themes/light.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <meta property="og:title" content="Kijkgat | Zie wat je nog niet zag">
     <meta property="og:description" content="Kijkgat | Zie wat je nog niet zag">
     <meta property="og:image" content="/assets/images/og_image.png">

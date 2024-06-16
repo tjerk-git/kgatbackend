@@ -7,9 +7,9 @@
 }
 
 @font-face {
-  font-family: 'archivo';
+  font-family: 'archivo bold';
   src: url('../assets/fonts/Archivo-VariableFont_wdth\,wght.ttf') format('truetype');
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -19,6 +19,8 @@
   margin: 0;
   padding: 0;
 }
+
+
 
 a {
   text-decoration: none;
@@ -35,6 +37,12 @@ a {
   --sl-input-border-radius-medium: 2rem !important;
   --sl-color-neutral-0: #FFFDF4 !important;
   --sl-font-size-medium: 1.6rem !important;
+  --color-neon-green: #00FF75;
+  --color-dark-green: #065B2D;
+  --color-medium-green: #087F3F;
+  --color-light-gray: #D9D9D9;
+  --color-pastel-yellow: #FFE67E;
+  --color-charcoal: #231F20;
 }
 
 html {
@@ -56,6 +64,108 @@ body {
 
 h1 {
   font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.its-ya-boi-in-the-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'archivo bold', sans-serif;
+  font-size: 15rem;
+  font-weight: 800;
+  user-select: none;
+  cursor: none;
+}
+
+.content-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.the-world-is-a-museum {
+  background: var(--color-charcoal);
+  color: var(--off-white);
+  padding: 4rem;
+  height: 50dvh;
+}
+
+.the-new-ticker {
+  width: 100dvw;
+  padding: 4rem;
+  background: var(--color-dark-green);
+}
+
+.expo {
+  background: var(--color-neon-green);
+  color: var(--off-black);
+  min-height: 50dvh;
+  padding: 4rem;
+}
+
+
+swiper-container {
+  width: 130dvw;
+  height: 100%;
+  margin-left: -20rem;
+}
+
+swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.the-world-is-a-museum h2 {
+  font-size: 8.0rem;
+  font-weight: 800;
+  font-family: 'archivo bold', sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.expo h2 {
+  font-size: 6.0rem;
+  font-weight: 800;
+  font-family: 'archivo bold', sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.expo p {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 4rem;
+}
+
+.expo p a {
+  text-decoration: underline;
+}
+
+.expo h3 {
+  font-size: 4.0rem;
+  font-weight: 800;
+  font-family: 'archivo bold', sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.the-world-is-a-museum p {
+  font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 1.6rem;
@@ -91,8 +201,6 @@ img {
 .canvas {
   height: 100dvh;
   position: relative;
-  margin-bottom: 10rem;
-  border-bottom: 4px dashed var(--off-black);
 }
 
 .mobile_chevron {
