@@ -69,56 +69,30 @@
     <img src="/assets/images/globaltranslations2.gif" alt="kijkgat in different languages moving" />
   </div>
 
+  @if(count($submissions) > 5)
+
   <section class="expo">
     <div class="content-container">
       <h2>ONLINE KIJKGAT EXPO</h2>
       <h3>#1 TEXTUUR</h3>
       <p>Dit zijn de inzendingen van juni, <a href="">schrijf je in</a> voor onze nieuwsbrief om de volledige expo mee te krijgen.
     </div>
+
     <swiper-container class="mySwiper" slides-per-view="5" space-between="30" free-mode="true">
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/1.png" alt="expo image 1" />
-        <div class="swipe_text">
-          <span>Bowlingpin</span>
-          <span>Michelle van der Plaats</span>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/2.png" alt="expo image 1" />
-        <div class="swipe_text">
-          <span class="swipe_title">Bowlingpin</span>
-          <span>Michelle van der Plaats</span>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/3.png" alt="expo image 1" />
-        <div class="swipe_text">
-          <span class="swipe_title">Bowlingpin</span>
-          <span>Michelle van der Plaats</span>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/4.png" alt="expo image 1" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/5.png" alt="expo image 1" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/1.png" alt="expo image 1" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/1.png" alt="expo image 1" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/1.png" alt="expo image 1" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/assets/images/inzendingen/1.png" alt="expo image 1" />
-      </swiper-slide>
 
+      @foreach($submissions as $submission)
+      <swiper-slide>
+        <img src="{{ $submission->image }}" alt="expo image" />
+        <div class="swipe_text">
+          <span class="swipe_title">{{ $submission->description }}</span>
+          <span>{{ $submission->name }}</span>
+        </div>
+      </swiper-slide>
+      @endforeach
     </swiper-container>
-
   </section>
+  @endif
+
 
   <section class="inzending">
     <div class="inzending_box">
@@ -131,7 +105,18 @@
         </p>
       </div>
 
-      <div class="form_box">
+      <div class="form_box" id="submission_form">
+
+
+        @if(session()->has('message'))
+        <div class="confirmed_submission">
+          <h3>Check je mailbox!</h3>
+          <p>Bevestig je inzending via de bevestigingsmail die je zojuist hebt ontvangen*.</p>
+          <p>*Check je spamfolder als je niks ziet.</p>
+          <img src="/assets/images/kijkboi.png" alt="bedankt voor insturen" />
+        </div>
+        @else
+
         <h3>Inzending voor: #1 Textuur</h3>
         <form action="/submissions" method="post" enctype="multipart/form-data">
           @csrf
@@ -160,6 +145,11 @@
           <input type="submit" value="Verstuur inzending">
 
         </form>
+        @endif
+
+
+
+
       </div>
     </div>
   </section>
@@ -408,7 +398,6 @@
   <script src="js/fslightbox.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
 
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
 

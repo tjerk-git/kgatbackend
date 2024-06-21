@@ -9,5 +9,5 @@ class Submission extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'image'];
+    protected $fillable = ['name', 'email', 'image', 'description', 'location'];
 }

@@ -121,9 +121,26 @@ h1 {
   gap: 2rem;
 }
 
+.confirmed_submission h3 {
+  font-size: 4.0rem;
+  font-weight: 500;
+  font-family: "archivo bold", sans-serif;
+  color: var(--off-white);
+}
+
+.confirmed_submission img {
+  width: 100px;
+}
+
+.confirmed_submission p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
 .inzending_box p {
   max-width: 400px;
-  font-size: 2.0rem;
 }
 
 .form_box {
@@ -912,11 +929,6 @@ section {
   width: 100%;
 }
 
-.gum:hover {
-  color: #FF79A3;
-  transform: scale(1.1);
-  text-decoration: underline;
-}
 
 .grid {
   display: flex;
