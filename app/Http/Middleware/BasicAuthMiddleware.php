@@ -17,8 +17,8 @@ class BasicAuthMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $username = env('BASIC_AUTH_USERNAME', 'kijkgat');
-        $password = env('BASIC_AUTH_PASSWORD', 'durftekijken');
+        $username = env('BASIC_AUTH_USERNAME', '');
+        $password = env('BASIC_AUTH_PASSWORD', '');
 
         if ($request->getUser() !== $username || $request->getPassword() !== $password) {
             $headers = ['WWW-Authenticate' => 'Basic'];
