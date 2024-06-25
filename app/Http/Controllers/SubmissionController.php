@@ -79,10 +79,14 @@ class SubmissionController extends Controller
             $submission->is_confirmed = true;
             $submission->confirmation_token = null;
             $submission->save();
-            return view('success'); 
+            return view('submissions.success'); 
         } else {
-            return view('failure'); 
+            return view('submissions.failure'); 
         }
+    }
+
+    public function test(){
+        return view('success'); 
     }
 
     public function allowSubmission($id)

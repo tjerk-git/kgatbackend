@@ -26,7 +26,7 @@ const grid = document.querySelector('.grid');
 var iso = new Isotope(grid, {
   itemSelector: '.grid-item',
   layoutMode: 'masonry',
-  filter: '.kader'
+  filter: '.geenontwerp'
 });
 
 imagesLoaded(grid).on('progress', function () {
@@ -46,7 +46,7 @@ for (const p of filterText.querySelectorAll('p')) {
   // if p tag has a data-filter attribute
   if (p.hasAttribute('data-filter')) {
     // if p tag's data-filter attribute matches the filterValue
-    if (p.getAttribute('data-filter') === '.kader') {
+    if (p.getAttribute('data-filter') === '.geenontwerp') {
       // show p tag
       p.classList.remove('hidden');
     } else {
@@ -66,9 +66,7 @@ for (const filterButton of filterButtons) {
       // if p tag has a data-filter attribute
       if (p.hasAttribute('data-filter')) {
 
-        console.log(p.getAttribute('data-filter'));
 
-        console.log(filterValue);
         // if p tag's data-filter attribute matches the filterValue
         if (p.getAttribute('data-filter') === filterValue) {
           // show p tag

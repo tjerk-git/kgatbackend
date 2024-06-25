@@ -144,7 +144,7 @@ h1 {
 }
 
 .form_box {
-  max-width: 300px;
+  max-width: 340px;
   background: #087F3F;
   border-radius: 20px;
   padding: 3rem;
@@ -256,9 +256,7 @@ footer {
 }
 
 .grey-matter {
-  background: var(--color-light-gray);
   color: var(--off-black);
-  height: 50dvh;
   padding: 4rem;
   margin-bottom: 10rem;
 }
@@ -291,6 +289,7 @@ footer {
   line-height: 1.2;
   margin-bottom: 1.6rem;
 }
+
 
 .highlight_box p {
   font-weight: 300;
@@ -331,7 +330,6 @@ footer {
   padding: 4rem;
   border: 2px solid var(--off-black);
   max-width: 706px;
-  height: 780px;
 }
 
 .highlight_box h1 {
@@ -348,6 +346,7 @@ footer {
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
+  height: 50dvh;
 }
 
 .like_spinning_plates img {
@@ -454,7 +453,7 @@ img {
 }
 
 #kijkgat_mobile {
-  height: 100vh;
+  height: 50dvh;
   display: none;
   justify-content: center;
   align-items: center;
@@ -848,7 +847,6 @@ video {
   flex-direction: column;
   gap: 1rem;
   font-family: 'archivo';
-  margin-top: -20rem;
 }
 
 .gotta-keep-em-seperated {
@@ -903,10 +901,55 @@ section {
 .all_the_kijkgats {
   padding: 2rem;
   text-align: center;
+  overflow: scroll;
 }
 
 .all_the_kijkgats img {
   margin-bottom: 2rem;
+}
+
+.mobile_footer_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.full_boi_mail {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.full_boi_pgum {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.full_boi_pgum a {
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.full_boi_pgum img {
+  width: 2rem;
+  margin-right: 1rem;
+  background: var(--off-white);
+  border-radius: 100%;
+}
+
+.kijkgat_logo_mobile {
+  width: 5rem;
+}
+
+.desktop_footer {
+  display: none;
 }
 
 .big_header h1 {
@@ -1009,6 +1052,87 @@ section {
 
 
 @media (max-width: 768px) {
+
+  .its-ya-boi-in-the-middle {
+    font-size: 5rem;
+  }
+
+  .the-world-is-a-museum h2 {
+    font-size: 5.0rem;
+  }
+
+  .the-world-is-a-museum p {
+    font-size: 1.6rem;
+  }
+
+  .inzending_box h2 {
+    font-size: 4.0rem;
+  }
+
+  .inzending {
+    padding: 1rem;
+  }
+
+  .highlight_box {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .big_payoff_container {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  footer {
+    padding: 2rem;
+  }
+
+  .big_header h1 {
+    font-size: 5.0rem;
+  }
+
+  .highlight_box h1 {
+    font-size: 3rem;
+  }
+
+  .highlight_images_container img {
+    width: 50%;
+  }
+
+  .highlight_container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .highlight_text {
+    padding: 1rem;
+  }
+
+  .grey-matter {
+    padding: 0;
+  }
+
+  .left_side {
+    width: 100%;
+  }
+
+  .right_side {
+    width: 100%;
+  }
+
+  .inzending_box {
+    flex-direction: column
+  }
+
+  .highlight_text h2 {
+    font-size: 1.6rem;
+  }
+
+  swiper-container {
+    width: 401dvw;
+  }
+
   .center_controls {
     display: none;
   }
@@ -1039,6 +1163,30 @@ section {
   .kijkgat_controls {
     bottom: 2rem;
     flex-direction: column;
+  }
+
+  .like_spinning_plates {
+    height: 60dvh;
+  }
+
+  .all_the_kijkgats img {
+    max-width: 380%;
+  }
+
+  .big_payoff_container {
+    gap: 2rem;
+  }
+
+  .the-new-ticker img {
+    max-width: 500%;
+  }
+
+  .little_outro {
+    font-size: 1rem;
+  }
+
+  .big_payoff_container h1 {
+    font-size: 5.0rem;
   }
 
   .left_controls {

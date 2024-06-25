@@ -124,10 +124,10 @@
 
 
           <label for="name">Jouw naam</label>
-          <input type="text" name="name" id="name" placeholder="Tjerk" required>
+          <input type="text" name="name" id="name" placeholder="Jouw naam" required>
 
           <label for="email">Jouw email</label>
-          <input type="email" name="email" id="email" placeholder="voorbeeld@gmail.com" required>
+          <input type="email" name="email" id="email" placeholder="voorbeeld@gmail.com" required autocomplete="off">
 
 
           <label for="description">Beschrijf wat we zien door het kijkgat</label>
@@ -146,10 +146,6 @@
 
         </form>
         @endif
-
-
-
-
       </div>
     </div>
   </section>
@@ -221,114 +217,104 @@
 
   <section class="yellow-the-worst-coldplay-song">
 
-
-
     <section class="mx-auto image_gallery">
       <div class="big_header">
         <h1>HET ONTWERP VAN KIJKGAT</h1>
       </div>
       <div id="filters" class="button-group">
-        <button class="button is-checked kijkgat" data-filter=".kader">Kader</button>
-        <button class="button kijkgat" data-filter=".geenontwerp">Geen ontwerp</button>
+        <button class="button is-checked kijkgat" data-filter=".geenontwerp">Geen ontwerp</button>
+        <button class="button kijkgat" data-filter=".vorm">Vorm</button>
         <button class="button kijkgat" data-filter=".rond">Rond</button>
         <button class="button kijkgat" data-filter=".nietrond">Niet rond</button>
         <button class="button kijkgat" data-filter=".hetbestondal">Het bestond al</button>
       </div>
 
       <div class="mx-auto text_for_products" id="filter-text">
-        <p data-filter=".kader">Een Kijkgat vormt een kader voor de wereld om je heen.
-          Het laat je focussen op specifieke beelden, waar je zonder dit kader niet zomaar naar zou kijken.
-          Een kader om ruis weg te halen en zo meer te kunnen zien. </p>
-        <p data-filter=".rond">Het gat is rond, om associaties met veel voorkomende rechthoekige kaders te vermijden.
-          Zo wordt het kijken door een Kijkgat niet in direct verband gebracht met bijvoorbeeld fotografie,
-          een mobiele telefoon of een schilderij. </p>
-        <p data-filter=".hetbestondal">Een spiegel, een raam, een deuropening, een omlijsting.
-          Een verrekijker, een vergrootglas, een camera. Een achtergelaten autoband langs de weg,
-          de tunnels in de oren van Michelle. Een kaartje met een gat, een poster met een gat, een muur met een gat.
+        <p data-filter=".vorm">Een Kijkgat heeft dezelfde afmeting als een pinpas, zodat hij makkelijk kan worden meegenomen. Zo heb je je Kijkgat op elk nodig moment bij je.</p>
 
-          Een gat, het bestond al. Kijkgat nog niet.</p>
-        <p data-filter=".geenontwerp">Een kijkgat heeft geen vaste kleur of ontwerp. Hierdoor behoudt
-          het de focus op wat er door het gat te zien is. Het enige vaste is de vorm:
-          een kaartje met een gat. Het uiterlijk hiervan wordt bepaald door het gebruik en de gebruiker.</p>
-        <p data-filter=".nietrond">Het gat is rond, maar het gaat niet om de rondheid van een Kijkgat.
-          Niet elk Kijkgat wordt op de millimeter nauwkeurig gereproduceerd, waardoor niet elk Kijkgat
-          altijd precies hetzelfde eruit komt te zien. Voor het gebruik van Kijkgat maakt dit echter
-          geen verschil. Het gaat niet om de cirkel, het gaat over wat je er doorheen ziet.</p>
+        <p data-filter=".rond">Het gat is rond, om associaties met veel voorkomende rechthoekige kaders te vermijden. Zo worden de beelden of vondsten die je met je Kijkgat tegenkomt niet in direct verband gebracht met bijvoorbeeld fotografie, een mobiele telefoon of een schilderij.</p>
+
+        <p data-filter=".hetbestondal">Een spiegel, een raam, een deuropening, een omlijsting. Een verrekijker, een vergrootglas, een camera. Een achtergelaten autoband langs de weg, de tunnels in de oren van Michelle. Een kaartje met een gat, een poster met een gat, een muur met een gat. Een gat, het bestond al. Kijkgat nog niet.</p>
+
+        <p data-filter=".geenontwerp">Een Kijkgat heeft geen vaste kleur of ontwerp. Hierdoor behoudt het de focus op wat er door het gat te zien is. Het enige vaste is de vorm: een kaartje met een gat. Het uiterlijk hiervan wordt bepaald door het materiaal en het gebruik. </p>
+
+        <p data-filter=".nietrond">Het gat is rond, maar het gaat niet om de rondheid van een Kijkgat. Niet elk Kijkgat wordt op de millimeter nauwkeurig gereproduceerd, waardoor niet elk Kijkgat altijd precies hetzelfde eruit komt te zien. Voor het gebruik van Kijkgat maakt dit echter geen verschil. Het gaat niet om de cirkel, maar wel wat je erdoorheen ziet.</p>
+
       </div>
 
       <div class="grid" id="gallery">
-        <div class="grid-item kader">
-          <a data-fslightbox="gallery" href="assets/images/isotope/kader_1.jpg">
+        <div class="grid-item vorm">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/kader_1.jpg">
             <img src="/assets/images/isotope/kader_1.jpg" alt="kijkgat" />
           </a>
         </div>
-        <div class="grid-item kader">
-          <a data-fslightbox="gallery" href="assets/images/isotope/kader_2.jpg">
+        <div class="grid-item vorm">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/kader_2.jpg">
             <img src="/assets/images/isotope/kader_2.jpg" alt="kijkgat" />
           </a>
         </div>
-        <div class="grid-item kader">
-          <a data-fslightbox="gallery" href="assets/images/isotope/kader_3.jpg">
+        <div class="grid-item vorm">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/kader_3.jpg">
             <img src="/assets/images/isotope/kader_3.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item rond">
-          <a data-fslightbox="gallery" href="assets/images/isotope/rond_1.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/rond_1.jpg">
             <img src="/assets/images/isotope/rond_1.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item rond">
-          <a data-fslightbox="gallery" href="assets/images/isotope/rond_2.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/rond_2.jpg">
             <img src="/assets/images/isotope/rond_2.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item rond">
-          <a data-fslightbox="gallery" href="assets/images/isotope/rond_3.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/rond_3.jpg">
             <img src="/assets/images/isotope/rond_3.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item nietrond">
-          <a data-fslightbox="gallery" href="assets/images/isotope/nietrond_1.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/nietrond_1.jpg">
             <img src="/assets/images/isotope/nietrond_1.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item nietrond">
-          <a data-fslightbox="gallery" href="assets/images/isotope/nietrond_2.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/nietrond_2.jpg">
             <img src="/assets/images/isotope/nietrond_2.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item nietrond">
-          <a data-fslightbox="gallery" href="assets/images/isotope/nietrond_3.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/nietrond_3.jpg">
             <img src="/assets/images/isotope/nietrond_3.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item geenontwerp">
-          <a data-fslightbox="gallery" href="assets/images/isotope/geenontwerp_1.jpg">
-            <img src="/assets/images/isotope/geenontwerp_1.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/geen_ontwerp_1.jpg">
+            <img src="/assets/images/isotope/geen_ontwerp_1.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item geenontwerp">
-          <a data-fslightbox="gallery" href="assets/images/isotope/geenontwerp_2.jpg">
-            <img src="/assets/images/isotope/geenontwerp_2.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/geen_ontwerp_2.jpg">
+            <img src="/assets/images/isotope/geen_ontwerp_2.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item geenontwerp">
-          <a data-fslightbox="gallery" href="assets/images/isotope/geenontwerp_3.jpg">
-            <img src="/assets/images/isotope/geenontwerp_3.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/geen_ontwerp_3.jpg">
+            <img src="/assets/images/isotope/geen_ontwerp_3.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item hetbestondal">
-          <a data-fslightbox="gallery" href="assets/images/isotope/hetbestondal_1.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/hetbestondal_1.jpg">
             <img src="/assets/images/isotope/hetbestondal_1.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item hetbestondal">
-          <a data-fslightbox="gallery" href="assets/images/isotope/hetbestondal_2.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/hetbestondal_2.jpg">
             <img src="/assets/images/isotope/hetbestondal_2.jpg" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item hetbestondal">
-          <a data-fslightbox="gallery" href="assets/images/isotope/hetbestondal_3.jpg">
+          <a data-fslightbox="gallery" href="/assets/images/isotope/hetbestondal_3.jpg">
             <img src="/assets/images/isotope/hetbestondal_3.jpg" alt="kijkgat" />
           </a>
         </div>
@@ -363,28 +349,50 @@
         </form>
       </div>
     </div>
+    <div class="mobile_footer">
+      <div class="mobile_footer_container">
+        <div class="kijkgat_logo_mobile">
+          <img src="assets/images/kijkgatgrain.png" alt="kijkgat logo grain" />
+        </div>
 
+        <div>
+          <a href="https://www.instagram.com/kijkgaten/" target="_blank">
+            <img src="assets/images/instagram_logo.png" alt="instagram logo" />
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/company/kijkgat/" target="_blank">
+            <img src="assets/images/linkedin_logo.png" alt="linkedin logo" />
+          </a>
+        </div>
+      </div>
+      <p class="full_boi_mail">mail@kijkgat.com</p>
+      <p class="full_boi_pgum"><img src="assets/images/potloodgum.png">online gezet door <a href="https://potloodgum.com" target="_blank">potloodgum</a></p>
 
-    <div class="kijkgat_logo_container">
-      <img src="assets/images/kijkgatgrain.png" alt="kijkgat logo grain" />
     </div>
 
-    <div class="icons_container">
-      <a href="https://www.instagram.com/kijkgaten/" target="_blank">
-        <img src="assets/images/instagram_logo.png" alt="instagram logo" />
-      </a>
-      <a href="https://www.linkedin.com/company/kijkgat/" target="_blank">
-        <img src="assets/images/linkedin_logo.png" alt="linkedin logo" />
-      </a>
+    <div class="desktop_footer">
+      <div class="kijkgat_logo_container">
+        <img src="assets/images/kijkgatgrain.png" alt="kijkgat logo grain" />
+      </div>
 
-      <p class="little_thingy">mail@kijkgat.com</p>
+      <div class="icons_container">
+        <a href="https://www.instagram.com/kijkgaten/" target="_blank">
+          <img src="assets/images/instagram_logo.png" alt="instagram logo" />
+        </a>
+        <a href="https://www.linkedin.com/company/kijkgat/" target="_blank">
+          <img src="assets/images/linkedin_logo.png" alt="linkedin logo" />
+        </a>
 
-      <p class="little_outro">Ontwikkeld door
-        Michelle v/d Plaats en Allert Sjabbens</p>
-    </div>
+        <p class="little_thingy">mail@kijkgat.com</p>
 
-    <div class="pgum_containert">
-      <img src="assets/images/potloodgum.png">online gezet door <a href="https://potloodgum.com" target="_blank">potloodgum</a>
+        <p class="little_outro">Ontwikkeld door
+          Michelle v/d Plaats en Allert Sjabbens</p>
+      </div>
+
+      <div class="pgum_containert">
+        <img src="assets/images/potloodgum.png">online gezet door <a href="https://potloodgum.com" target="_blank">potloodgum</a>
+      </div>
     </div>
   </footer>
 

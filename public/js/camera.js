@@ -13,6 +13,7 @@ async function initCamera() {
       audio: false,
       video: {
         facingMode: "environment",
+        zoom: true,
       },
     });
     const videoElement = document.getElementById("camera-view");
