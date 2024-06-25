@@ -93,9 +93,6 @@ class SubmissionController extends Controller
         }
     }
 
-    public function test(){
-        return view('success'); 
-    }
 
     public function allowSubmission($id)
     {
