@@ -948,9 +948,6 @@ section {
   width: 5rem;
 }
 
-.desktop_footer {
-  display: none;
-}
 
 .big_header h1 {
   font-size: 8rem;
@@ -1049,9 +1046,21 @@ section {
   transform: translateY(0);
 }
 
+.mobile_footer {
+  display: none;
+}
+
 
 
 @media (max-width: 768px) {
+
+  .desktop_footer {
+    display: none;
+  }
+
+  .mobile_footer {
+    display: block;
+  }
 
   .its-ya-boi-in-the-middle {
     font-size: 5rem;
@@ -1140,7 +1149,6 @@ section {
   .hero-section img {
     transform: scale(3);
   }
-
 
   .button-group {
     flex-direction: row;

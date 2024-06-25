@@ -35,7 +35,15 @@ class SubmissionController extends Controller
             $message = "Submission saved successfully!";
 
             // Send an email with the confirmation token (optional)
-            Mail::to($submission->email)->send(new SubmissionConfirm($submission));
+            if (Mail::to($submission->email)->send(new SubmissionConfirm($submission))) {
+            // Email sent successfully
+            // Log the successful email sending
+            \Illuminate\Support\Facades\Log::info('Email sent successfully to: ' . $submission->email);
+            } else {
+            // Email sending failed
+            // Log the failed email sending
+            \Illuminate\Support\Facades\Log::error('Failed to send email to: ' . $submission->email);
+            }
         } else {
             $message = "Submission could not be saved!";
         }
