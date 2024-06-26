@@ -66,7 +66,7 @@
   </section>
 
   <div class="the-new-ticker">
-    <img src="/assets/images/globaltranslations2.gif" alt="kijkgat in different languages moving" />
+    <img src="/assets/images/going global.gif" alt="kijkgat in different languages moving" />
   </div>
 
   @if(count($submissions) > 5)
@@ -259,35 +259,36 @@
           </a>
         </div>
         <div class="grid-item rond">
-          <a data-fslightbox="gallery" href="/assets/images/isotope/rond_1.jpg">
-            <img src="/assets/images/isotope/rond_1.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/rond 1.png">
+            <img src="/assets/images/isotope/rond 1.png" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item rond">
-          <a data-fslightbox="gallery" href="/assets/images/isotope/rond_2.jpg">
-            <img src="/assets/images/isotope/rond_2.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/rond 2.png">
+            <img src="/assets/images/isotope/rond 2.png" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item rond">
-          <a data-fslightbox="gallery" href="/assets/images/isotope/rond_3.jpg">
-            <img src="/assets/images/isotope/rond_3.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/rond 3.png">
+            <img src="/assets/images/isotope/rond 3.png" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item nietrond">
-          <a data-fslightbox="gallery" href="/assets/images/isotope/nietrond_1.jpg">
-            <img src="/assets/images/isotope/nietrond_1.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/niet rond 1.png">
+            <img src="/assets/images/isotope/niet rond 1.png" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item nietrond">
-          <a data-fslightbox="gallery" href="/assets/images/isotope/nietrond_2.jpg">
-            <img src="/assets/images/isotope/nietrond_2.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/niet rond 2.png">
+            <img src="/assets/images/isotope/niet rond 2.png" alt="kijkgat" />
           </a>
         </div>
         <div class="grid-item nietrond">
-          <a data-fslightbox="gallery" href="/assets/images/isotope/nietrond_3.jpg">
-            <img src="/assets/images/isotope/nietrond_3.jpg" alt="kijkgat" />
+          <a data-fslightbox="gallery" href="/assets/images/isotope/niet rond 3.png">
+            <img src="/assets/images/isotope/niet rond 3.png" alt="kijkgat" />
           </a>
         </div>
+
         <div class="grid-item geenontwerp">
           <a data-fslightbox="gallery" href="/assets/images/isotope/geen_ontwerp_1.jpg">
             <img src="/assets/images/isotope/geen_ontwerp_1.jpg" alt="kijkgat" />

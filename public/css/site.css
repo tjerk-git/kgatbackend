@@ -101,6 +101,13 @@ h1 {
   margin: 0 auto;
 }
 
+.the-new-ticker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+}
+
 .inzending {
   background: var(--off-white);
   color: var(--off-black);
