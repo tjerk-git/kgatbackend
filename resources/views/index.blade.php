@@ -91,6 +91,14 @@
       @endforeach
     </swiper-container>
   </section>
+  @else
+  <section class="expo">
+    <div class="content-container">
+      <h2>ONLINE KIJKGAT EXPO</h2>
+      <h3>#1 TEXTUUR</h3>
+      <p>Deze maand nog geen inzendingen, <a href="">schrijf je in</a> voor onze nieuwsbrief om de volledige expo mee te krijgen.
+    </div>
+  </section>
   @endif
 
 
