@@ -26,8 +26,10 @@ class SubmissionController extends Controller
 
         $submission->confirmation_token = bin2hex(random_bytes(32)); // Generate a random confirmation token
         
+
+
         // save the image to subdirectory images
-        $imageName = time().'.'.$request->image->extension();
+        $imageName = time().'.jpg';
         $request->image->move(public_path('images'), $imageName);
         $submission->image = 'images/'.$imageName;
 
