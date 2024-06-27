@@ -99,6 +99,7 @@ class SubmissionController extends Controller
         // get the submission with the given id
         $submission = Submission::find($id);
         $submission->is_approved = true;
+        $submission->is_confirmed = true;
         $submission->save();
 
         $html = '✅';
