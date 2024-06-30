@@ -118,9 +118,9 @@
 
         @if(session()->has('message'))
         <div class="confirmed_submission">
-          <h3>Check je mailbox!</h3>
-          <p>Bevestig je inzending via de bevestigingsmail die je zojuist hebt ontvangen*.</p>
-          <p>*Check je spamfolder als je niks ziet.</p>
+          <h3>We gaan het bekijken!</h3>
+          <p>Wij gaan je inzending goedkeuren!.</p>
+          <p>Bedankt voor het insturen.</p>
           <img src="/assets/images/kijkboi.png" alt="bedankt voor insturen" />
         </div>
         @else

@@ -35,17 +35,6 @@ class SubmissionController extends Controller
 
         if($submission->save()){
             $message = "Submission saved successfully!";
-
-            // Send an email with the confirmation token (optional)
-            if (Mail::to($submission->email)->send(new SubmissionConfirm($submission))) {
-            // Email sent successfully
-            // Log the successful email sending
-            \Illuminate\Support\Facades\Log::info('Email sent successfully to: ' . $submission->email);
-            } else {
-            // Email sending failed
-            // Log the failed email sending
-            \Illuminate\Support\Facades\Log::error('Failed to send email to: ' . $submission->email);
-            }
         } else {
             $message = "Submission could not be saved!";
         }
@@ -73,8 +62,6 @@ class SubmissionController extends Controller
 
     public function index()
     {
-        // Add code to retrieve and display all submissions
-        // get only the submissions where is_confirmed is true
         $submissions = Submission::orderBy('created_at', 'desc')->get();
         return view('submissions.index', compact('submissions'));
     }

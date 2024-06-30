@@ -34,12 +34,12 @@
           <button hx-get="{{ route('submissions.show', $submission->id) }}" hx-target=".submission-dialog" hx-swap="innerHTML" class="button outline show-dialog">
             Bekijken
           </button>
-          @if (!$submission->is_approved && $submission->is_confirmed)
+          @if (!$submission->is_approved || !$submission->is_confirmed)
           <button hx-post="{{ route('submissions.allow', $submission->id) }}" hx-headers="{{ json_encode(['X-CSRF-TOKEN' => csrf_token()]) }}" hx-swap="outerHTML" hx-target="this" class="button button-primary">
             Toestaan
           </button>
           @elseif ($submission->is_approved)
-          ✅
+
           @endif
           <a href="#" hx-delete="{{ route('submissions.destroy', $submission->id) }}" hx-headers="{{ json_encode(['X-CSRF-TOKEN' => csrf_token()]) }}" hx-confirm="Weet je zeker dat je deze inzending wilt verwijderen?" hx-swap="outerHTML" hx-target="closest tr" class="contrast outline">
             Verwijderen
