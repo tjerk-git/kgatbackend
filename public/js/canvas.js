@@ -67,8 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const kijkgat_mobile = document.querySelector('#kijkgat_mobile');
     kijkgat_mobile.style.display = 'flex';
 
-    const lineboi = document.querySelector('.gotta-keep-em-seperated');
-    lineboi.style.display = 'block';
   }
 
   init(0);
