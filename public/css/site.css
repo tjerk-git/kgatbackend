@@ -270,7 +270,7 @@ footer {
 
 .highlight_images_container {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: flex-start;
   align-items: center;
 }
