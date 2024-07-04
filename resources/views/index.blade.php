@@ -352,10 +352,10 @@
         </p>
 
         <form action="https://buttondown.email/api/emails/embed-subscribe/Kijkgat" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/Kijkgat', 'popupwindow')" class="embeddable-buttondown-form">
-          <label for="bd-email">Je E-mailadres</label>
-          <input type="email" name="email" id="bd-email" />
+          <label for="bd-email">Jouw e-mailadres</label>
+          <input type="email" name="email" id="bd-email" placeholder="voorbeeld@outlook.com" />
 
-          <input type="submit" value="Subscribe" />
+          <input type="submit" value="Schrijf je in voor de nieuwsbrief" />
           <p>
             <a href="https://buttondown.email/refer/Kijkgat" target="_blank">Powered by Buttondown.</a>
           </p>
