@@ -373,6 +373,10 @@ swiper-container {
   height: 100%;
 }
 
+iframe {
+  background: none;
+}
+
 swiper-slide {
   text-align: left;
   display: flex;

@@ -351,10 +351,14 @@
           Aan het eind van elke maand brengen we alle inzendingen samen en exposeren wij deze vondsten in de nieuwsbrief. Ook kondigen we hierin elke maand het nieuwe thema aan. <strong>Schrijf je in om niks te missen.</strong>
         </p>
 
-        <form action="/newsletter" method="post">
-          @csrf
-          <input type="email" name="email" id="email" placeholder="e-mailadres">
-          <input type="submit" value="Inschrijven">
+        <form action="https://buttondown.email/api/emails/embed-subscribe/Kijkgat" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/Kijkgat', 'popupwindow')" class="embeddable-buttondown-form">
+          <label for="bd-email">Je E-mailadres</label>
+          <input type="email" name="email" id="bd-email" />
+
+          <input type="submit" value="Subscribe" />
+          <p>
+            <a href="https://buttondown.email/refer/Kijkgat" target="_blank">Powered by Buttondown.</a>
+          </p>
         </form>
       </div>
     </div>
