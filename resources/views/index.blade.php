@@ -107,7 +107,8 @@
       <div>
         <h2>DEEL JOUW VONDST*</h2>
         <p>
-          Vind iets binnen het thema en claim jouw plekje in de expositie. Wanneer je je inschrijft voor de nieuwsbrief krijg je de volledige expositie aan het eind van de maand in je mailbox, inclusief jouw inzending!
+          Vind iets binnen het thema en claim jouw plekje in de expositie. Wanneer je je inschrijft voor de <a href="https://buttondown.email/Kijkgat">nieuwsbrief</a> krijg je de volledige expositie aan het eind van de maand in je mailbox, inclusief jouw inzending!
+
           <br><br>
           *Tip: zorg ervoor dat je camera niet op het kaartje focust, maar op wat er door het gat te zien is.
         </p>
