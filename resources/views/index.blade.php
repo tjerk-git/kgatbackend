@@ -69,7 +69,7 @@
     <img src="/assets/images/going global.gif" alt="kijkgat in different languages moving" />
   </div>
 
-  @if(count($submissions) > 5)
+  @if(count($submissions) > 1)
 
   <section class="expo">
     <div class="content-container">
