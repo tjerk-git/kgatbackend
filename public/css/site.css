@@ -369,9 +369,8 @@ footer {
 }
 
 swiper-container {
-  width: 110dvw;
+  width: 100dvw;
   height: 100%;
-  margin-left: -20rem;
 }
 
 swiper-slide {
