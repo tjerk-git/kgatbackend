@@ -21,12 +21,13 @@ class SubmissionController extends Controller
         $submission->location = $request->location;
 
         if($submission->newsletter == 'on'){
-            //$submission->newsletter = true;
+            $submission->newsletter = true;
+        }else{
+            $submission->newsletter = false;
         }
 
-        $submission->confirmation_token = bin2hex(random_bytes(32)); // Generate a random confirmation token
+        //$submission->confirmation_token = bin2hex(random_bytes(32)); // Generate a random confirmation token
         
-
 
         // save the image to subdirectory images
         $imageName = time().'.jpg';
