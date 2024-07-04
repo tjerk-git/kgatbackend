@@ -348,7 +348,8 @@
 
       <div>
         <p>
-          Aan het eind van elke maand brengen we alle inzendingen samen en exposeren wij deze vondsten in de nieuwsbrief. Ook kondigen we hierin elke maand het nieuwe thema aan. <strong>Schrijf je in om niks te missen.</strong>
+          Aan het eind van elke maand brengen we alle inzendingen samen en exposeren wij deze vondsten in de nieuwsbrief. Ook kondigen we hierin elke maand het nieuwe thema aan. <a href="https://buttondown.email/Kijkgat">Schrijf je in om niks te missen.</a>
+
         </p>
 
         <form action="https://buttondown.email/api/emails/embed-subscribe/Kijkgat" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/Kijkgat', 'popupwindow')" class="embeddable-buttondown-form">
