@@ -26,6 +26,8 @@
           <select name="theme" hx-post="{{ route('submissions.update', $submission->id) }}" hx-headers="{{ json_encode(['X-CSRF-TOKEN' => csrf_token()]) }}" hx-swap="outerHTML">
             <option value="">Selecteer een thema</option>
             <option value="textuur" {{ $submission->theme == 'textuur' ? 'selected' : '' }}>#1 Textuur</option>
+            <option value="shoegaze" {{ $submission->theme == 'shoegaze' ? 'selected' : '' }}>#2 Shoegaze</option>
+
           </select>
           </select>
         </td>
