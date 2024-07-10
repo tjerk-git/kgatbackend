@@ -79,7 +79,7 @@
 
     </div>
 
-    <swiper-container class="mySwiper" slides-per-view="5" space-between="30" free-mode="true">
+    <swiper-container class="mySwiper" slides-per-view="5" space-between="30" free-mode="true" autoplay="true">
 
       @foreach($submissions as $submission)
       <swiper-slide>
