@@ -18,13 +18,13 @@ class SubmissionController extends Controller
         $submission->email = $request->email;
         $submission->image = $request->image;
         $submission->description = $request->description;
-        $submission->location = $request->location;
+        //$submission->location = $request->location;
 
-        if($submission->newsletter == 'on'){
-            $submission->newsletter = true;
-        }else{
-            $submission->newsletter = false;
-        }
+        // if($submission->newsletter == 'on'){
+        //     $submission->newsletter = true;
+        // }else{
+        //     $submission->newsletter = false;
+        // }
 
         //$submission->confirmation_token = bin2hex(random_bytes(32)); // Generate a random confirmation token
         

@@ -13,7 +13,6 @@
         <th>E-mail</th>
         <th>Datum</th>
         <th>Thema</th>
-        <th>Nieuwsbrief</th>
         <th>Acties</th>
       </tr>
     </thead>
@@ -30,9 +29,6 @@
           </select>
           </select>
         </td>
-        </td>
-        <td>
-          <input type="checkbox" name="newsletter" {{ $submission->newsletter ? 'checked' : '' }}>
         </td>
         <td>
           <button hx-get="{{ route('submissions.show', $submission->id) }}" hx-target=".submission-dialog" hx-swap="innerHTML" class="button outline show-dialog">

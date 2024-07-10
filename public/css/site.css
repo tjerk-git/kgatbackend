@@ -205,7 +205,7 @@ h1 {
 .the-new-ticker {
   width: 100dvw;
   padding: 2rem;
-  background: var(--color-dark-green);
+  background: #1E3ACE;
 }
 
 .expo {
@@ -868,6 +868,11 @@ video {
   display: none;
 }
 
+.inzending_box a {
+  color: var(--off-white);
+  text-decoration: underline;
+}
+
 
 .button {
   cursor: pointer;
@@ -1087,6 +1092,7 @@ section {
   .inzending_box h2 {
     font-size: 4.0rem;
   }
+
 
   .inzending {
     padding: 1rem;

@@ -143,15 +143,6 @@
           <label for="description">Beschrijf wat we zien door het kijkgat</label>
           <input type="description" name="description" placeholder="Wat zie je?" id="description" required>
 
-
-          <label for="where">Waar is de foto genomen</label>
-          <input type="text" name="where" id="where" placeholder="Waar?" required>
-
-
-          <input type="checkbox" name="newsletter" id="newsletter">
-          <label for="newsletter">Ja ik schrijf mij in voor de nieuwsbrief</label>
-
-
           <input type="submit" value="Verstuur inzending">
 
         </form>
