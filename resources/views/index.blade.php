@@ -75,7 +75,7 @@
     <div class="content-container">
       <h2>ONLINE KIJKGAT EXPO</h2>
       <h3>#1 TEXTUUR</h3>
-      <p>Dit zijn de inzendingen van juni, <a href="https://buttondown.email/Kijkgat">schrijf je in</a> voor onze nieuwsbrief om de volledige expo mee te krijgen.
+      <p>Dit zijn de inzendingen van juli, <a href="https://buttondown.email/Kijkgat">schrijf je in</a> voor onze nieuwsbrief om de volledige expo mee te krijgen.
 
     </div>
 
