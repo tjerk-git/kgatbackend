@@ -13,7 +13,6 @@
   </section>
 
   <section class="canvas" id="canvas_container">
-    <h1 class="its-ya-boi-in-the-middle">KIJKGAT</h1>
 
     <canvas id="canvas">
 

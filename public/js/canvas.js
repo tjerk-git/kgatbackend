@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // calculate the middle of the canvas
 
-  let selectedPhoto = 0;
+  let selectedPhoto = (Math.floor(Math.random() * 9));
+
+  console.log('selectedPhoto', selectedPhoto);
   let img;
 
 
@@ -148,12 +150,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  function init(imageIndex = 0, force = false) {
+  function init(imageIndex = selectedPhoto, force = false) {
 
     if (!isUserUsingMobile()) {
       const canvasOverlay = document.querySelector("#canvas_container");
-      const canvasOverlayWidth = canvasOverlay.offsetWidth;
-      const canvasOverlayHeight = canvasOverlay.offsetHeight;
 
       // change the image randomly after 5 seconds choose from array of images
       img = new Image();
@@ -173,20 +173,16 @@ document.addEventListener('DOMContentLoaded', function () {
         "../assets/images/kijkgat/9.webp",
       ];
 
-      img.src = images[imageIndex];
+      img.src = images[selectedPhoto];
 
       // Set canvas dimensions based on the window size
-      can.width = canvasOverlayWidth;
-      can.height = canvasOverlayHeight;
+      can.width = 1920;
+      can.height = 1080;
 
       if (force === true && checkbox.checked === false) {
         lightsOn();
         return;
       } else {
-        console.log('redraw by init');
-
-        console.log('middleX', middleX);
-        console.log('middleY', middleY);
 
         redraw({ x: middleX, y: middleY });
       }
@@ -204,7 +200,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       can.width = can.width;
       ctx.drawImage(img, 0, 0, 1920, 1080);
-      //ctx.drawImage(img, 0, 0, 900, 400);
       ctx.beginPath();
       ctx.rect(0, 0, can.width, can.height);
 
@@ -213,9 +208,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       ctx.arc(mouse.x, mouse.y, cursorWidth, 0, Math.PI * 2, true);
 
-
       ctx.clip();
-      ctx.fillStyle = "#FFFDF4";
+      const patternImage = new Image();
+      patternImage.src = '../assets/images/kijkgat_default_bg.png'; // Path to your background image
+      ctx.fillStyle = ctx.createPattern(patternImage, 'no-repeat');
 
       ctx.fillRect(0, 0, can.width, can.height);
     }
