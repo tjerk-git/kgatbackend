@@ -152,51 +152,56 @@
   </section>
 
   <section class="grey-matter">
-    <div class="highlight_container">
-      <div class="highlight_box left_side">
-        <h1>UITGELICHT MEESTERWERK</h1>
-        <div class="highlight_images_container">
-          <img src="/assets/images/inzendingen/highlight.png" alt="highlight image" />
-          <img src="/assets/images/inzendingen/highlight2.png" alt="highlight image" />
-        </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
 
-        <div class="highlight_text_container">
-          <div class="highlight_text">
-            <h2>Bowlingpin</h2>
-            <p>Tralies idk</p>
-          </div>
-          <div class="highlight_text">
-            <h2>Locatie</h2>
-            <p>Middelburg</p>
-          </div>
+          <h2>Meesterwerk van: Michelle uit Leeuwarden</h2>
 
-          <div class="highlight_text">
-            <h2>Thema</h2>
-            <p>Textuur</p>
+          <div class="swiper-content">
+            <div class="highlight_images_container">
+              <img src="/assets/images/inzendingen/highlight.png" alt="highlight image" />
+              <img src="/assets/images/inzendingen/highlight2.png" alt="highlight image" />
+            </div>
           </div>
 
 
         </div>
+        <div class="swiper-slide">
+          <h2>Meesterwerk van: Tjerk uit Deventer</h2>
+
+          <div class="swiper-content">
+            <div class="highlight_images_container">
+              <img src="/assets/images/inzendingen/1.png" alt="highlight image" />
+              <img src="/assets/images/inzendingen/2.png" alt="highlight image" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <h2>Meesterwerk van: Allert uit Sjabbensville</h2>
+
+          <div class="swiper-content">
+            <div class="highlight_images_container">
+              <img src="/assets/images/inzendingen/3.png" alt="highlight image" />
+              <img src="/assets/images/inzendingen/4.png" alt="highlight image" />
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-slide">
+          <h2>Meesterwerk van: Maren uit Deventer</h2>
+          <div class="swiper-content">
+            <div class="highlight_images_container">
+              <img src="/assets/images/inzendingen/5.png" alt="highlight image" />
+              <img src="/assets/images/inzendingen/5.png" alt="highlight image" />
+            </div>
+          </div>
+        </div>
+
       </div>
+    </div>
 
-      <div class="highlight_box right_side">
-        <div class="little_bio_box">
-          <h2>Michelle</h2>
-          <p>23, uit Leeuwarden</p>
-        </div>
-        <h3>Hoe ben je bij deze vondst gekomen?</h3>
-        <p>
-          Onderweg naar school kwam ik dit tegen toen ik moest wachten voor een openstaande brug.
-        </p>
-
-        <h3>Wat wil je met dit werk vertellen?</h3>
-        <p>
-          Alsof de wereld een kringloop is en dat wanneer je een mooi beeld of verhaal tegenkomt dat dat eigenlijk hetzelfde voelt als dat moment dat je een uniek voorwerp in de kringloop tegenkomt. Die unieke vondst die niemand anders zag liggen.
-        </p>
-        <h3>Hoe verhoudt jouw werk zich op het desbetreffende thema?</h3>
-        <p>Ik kijk vaak omhoog. Daar waar je dat niet zo snel zou doen. Hier verstoppen zich veel mooie verhaaltjes of beelden waar naar mijn idee anderen vaak gauw voorbij lopen. Kijkgat helpt me hierbij.</p>
-
-      </div>
   </section>
 
   <section class="like_spinning_plates">

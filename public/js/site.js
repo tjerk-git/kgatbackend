@@ -93,3 +93,8 @@ for (const buttonGroup of buttonGroups) {
   }
 }
 
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "cards",
+  grabCursor: true,
+});

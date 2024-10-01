@@ -26,7 +26,7 @@
   <main>
     {{$slot}}
   </main>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/site.js"></script>
   <script data-goatcounter="https://kgat.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
