@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // calculate the middle of the canvas
 
   let selectedPhoto = (Math.floor(Math.random() * 9));
-
-  console.log('selectedPhoto', selectedPhoto);
   let img;
 
 
@@ -176,8 +174,8 @@ document.addEventListener('DOMContentLoaded', function () {
       img.src = images[selectedPhoto];
 
       // Set canvas dimensions based on the window size
-      can.width = 1920;
-      can.height = 1080;
+      can.width = 1280;
+      can.height = 720;
 
       if (force === true && checkbox.checked === false) {
         lightsOn();
@@ -199,20 +197,25 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       can.width = can.width;
-      ctx.drawImage(img, 0, 0, 1920, 1080);
+      ctx.drawImage(img, 0, 0, can.width, can.height);
       ctx.beginPath();
       ctx.rect(0, 0, can.width, can.height);
 
       // calculate a width based on the current window size
-      var cursorWidth = 88;
+      var cursorWidth = 66;
 
       ctx.arc(mouse.x, mouse.y, cursorWidth, 0, Math.PI * 2, true);
 
       ctx.clip();
       const patternImage = new Image();
-      patternImage.src = '../assets/images/kijkgat_default_bg.png'; // Path to your background image
-      ctx.fillStyle = ctx.createPattern(patternImage, 'no-repeat');
 
+      // add background color #fffdf4
+      ctx.fillStyle = "#fffdf4";
+      ctx.fillRect(0, 0, can.width, can.height);
+
+      patternImage.src = '../assets/images/kijkgat_default_bg.png'; // Path to your background image
+      ctx.translate(can.width / 2 - patternImage.width / 2, can.height / 2 - patternImage.height / 2);
+      ctx.fillStyle = ctx.createPattern(patternImage, 'no-repeat');
       ctx.fillRect(0, 0, can.width, can.height);
     }
   }
@@ -220,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function lightsOn() {
     can.width = can.width;
-    ctx.drawImage(img, 0, 0, 1920, 1080);
+    ctx.drawImage(img, 0, 0, can.width, can.height);
     ctx.beginPath();
     ctx.rect(0, 0, can.width, can.height);
     ctx.fillStyle = "rgba(255, 255, 255, 0)";
