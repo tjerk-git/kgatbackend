@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->boolean('is_approved')->default(false);
             $table->string('attachment')->nullable();   
-            $table->foreignId('theme_id')->constrained();
+            
             $table->timestamps();
         });
     }
