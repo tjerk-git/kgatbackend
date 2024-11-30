@@ -1,29 +1,26 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SubmissionController;
+use App\Http\Controllers\SubmissionsController;
 use App\Http\Middleware\BasicAuthMiddleware;
+use App\Models\Masterpiece;
+use App\Models\Setting;
+use App\Models\Theme;
+use App\Models\Submission;
+
 
 Route::get('/', function () {
-    // get all allowed submissions
-    $submissions = \App\Models\Submission::where('is_approved', 1)
-        ->where('theme', 'textuur')
-        ->get();
-
-    return view('index', compact('submissions'));
+    return view('index', [
+        'masterpieces' => Masterpiece::all(),
+        'submissions' => Submission::whereHas('theme', function ($query) {
+            $query->where('is_active', true);
+        })->where('is_approved', true)->get(),
+        'settings' => Setting::first(),
+        'theme' => Theme::where('is_active', true)->get()->first(),
+    ]);
 });
 
-Route::get('/submissions/confirm/{confirmation_token}/{email}', [SubmissionController::class, 'confirm'])->name('submissions.confirm');
-Route::post('/submissions', [SubmissionController::class, 'store'])->name('submissions.store');
+Route::get('/inzending', [SubmissionsController::class, 'create'])->name('submissions.create');
+Route::post('/inzending', [SubmissionsController::class, 'store'])->name('submissions.store');
 
-Route::get('/submissions/show/{id}', [SubmissionController::class, 'show'])->name('submissions.show');
-
-Route::middleware(BasicAuthMiddleware::class)->group(function () {
-   
-    Route::get('/submissions', [SubmissionController::class, 'index'])->name('submissions.index');
-   
-    Route::get('/submissions/allow/{id}', [SubmissionController::class, 'allow'])->name('submissions.allow');
-    Route::post('/submissions/allow/{id}', [SubmissionController::class, 'allowSubmission'])->name('submissions.allowSubmission');
-    Route::post('/submissions/updateTheme/{id}', [SubmissionController::class, 'update'])->name('submissions.update');
-    Route::delete('/submissions/{id}', [SubmissionController::class, 'destroy'])->name('submissions.destroy');
-});
-
+Route::get('/inzending/success', [SubmissionsController::class, 'success'])->name('submissions.success');
+Route::get('/inzending/failure', [SubmissionsController::class, 'failure'])->name('submissions.failure');

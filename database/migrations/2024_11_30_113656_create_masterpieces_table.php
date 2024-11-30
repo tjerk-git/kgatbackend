@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('submissions', function (Blueprint $table) {
+        Schema::create('masterpieces', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->nullable();
+            $table->string('name')->nullable();
+            $table->string('color')->nullable();
             $table->string('description')->nullable();
-            $table->boolean('is_approved')->default(false);
-            $table->string('attachment')->nullable();   
-            $table->foreignId('theme_id')->constrained();
+            $table->string('image')->nullable();
+            $table->string('second_image')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('submissions');
+        Schema::dropIfExists('masterpieces');
     }
 };

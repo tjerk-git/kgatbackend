@@ -977,7 +977,6 @@ video {
 }
 
 .inzending_box a {
-  color: var(--off-white);
   text-decoration: underline;
 }
 
@@ -1367,6 +1366,107 @@ section {
   .mobile_kijkgat {
     margin-bottom: 2rem;
   }
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form-group label{
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--off-white);
+  font-size: 1.6rem;
+}
+
+.form-group input{
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  color: var(--off-black);
+}
+
+.form-group input:focus{
+  outline: none;
+  border-color: #007BFF;
+}
+
+.form-group textarea{
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  color: var(--off-black);
+}
+
+.form-group textarea:focus{
+  outline: none;
+  border-color: #007BFF;
+}
+
+.form-group select{
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  color: var(--off-white);
+}
+
+.form-group select:focus{
+  outline: none;
+  border-color: #007BFF;
+}
+
+.form-group button{
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-group button:hover{
+  background-color: #0062cc;
+}
+
+.form-group input[type="file"]{
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  color: var(--off-white);
+}
+
+.form-group input[type="file"]:focus{
+  outline: none;
+  border-color: #007BFF;
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button{
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+} 
+
+
+.form-group button[type="submit"]{
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
 }
 
 

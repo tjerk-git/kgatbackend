@@ -53,44 +53,35 @@
 
     </section>
 
-    <section class="the-world-is-a-museum" id="spinning_plates">
+    <section class="the-world-is-a-museum" id="spinning_plates" @if($settings->first_color) style="background-color:{{$settings->first_color}}" @endif>
         <div class="content-container">
-            <h2>DE WERELD ALS MUSEUM</h2>
-            <p>
-                Kijkgat: een kaartje met een gat. Een uitgeknipte cirkel, dat dient als kader voor de wereld om je heen.
-                Een gat om ruis weg te halen en zo meer te kunnen zien. <br><br>
-
-                Bij het gebruiken van een Kijkgat zet je alledaagse voorwerpen of beelden in een nieuw kader, wat nieuwe
-                beelden of verhalen oplevert die je anders nooit zo zou bekijken. Een eindeloos spel dat de wereld in
-                een museum laat veranderen. Hiermee brengen we creativiteit en inspiratie in ieder persoon naar boven.
-                <br><br>
-
-                Op deze site ontdek je wat voor vondsten Kijkgat-gebruikers doen aan de hand van verschillende thema’s.
-                Een expositie van fragmenten die de basis vormen voor ieders creativiteit.
-            </p>
+            <h2>
+                @if ($settings->main_title) {{ $settings->main_title }} @else DE WERELD ALS MUSEUM @endif
+            </h2>
+            {!! $settings->description !!}
         </div>
     </section>
 
-    <div class="the-new-ticker">
+    <div class="the-new-ticker" @if($settings->second_color) style="background-color:{{$settings->second_color}}" @endif>
         <img src="/assets/images/going global.gif" alt="kijkgat in different languages moving" />
     </div>
 
+
     @if (count($submissions) > 1)
 
-        <section class="expo">
+        <section class="expo" @if($theme->color) style="background-color:{{$theme->color}}" @endif>
             <div class="content-container">
                 <h2>ONLINE KIJKGAT EXPO</h2>
-                <h3>#1 TEXTUUR</h3>
-                <p>Dit zijn de inzendingen van juli, <a href="https://buttondown.email/Kijkgat">schrijf je in</a> voor
-                    onze nieuwsbrief om de volledige expo mee te krijgen.
-
+                <h3>{{ $theme->titel }}</h3>
+                <p>{!! $theme->description !!}</p>
+       
             </div>
 
             <swiper-container class="mySwiper" slides-per-view="5" space-between="30" free-mode="true" autoplay="true">
 
                 @foreach ($submissions as $submission)
                     <swiper-slide>
-                        <img src="{{ $submission->image }}" alt="expo image" />
+                        <img src="storage/{{$submission->attachment }}" alt="expo image" />
                         <div class="swipe_text">
                             <span class="swipe_title">{{ $submission->description }}</span>
                             <span>{{ $submission->name }}</span>
@@ -103,16 +94,15 @@
         <section class="expo">
             <div class="content-container">
                 <h2>ONLINE KIJKGAT EXPO</h2>
-                <h3>#1 TEXTUUR</h3>
+
                 <p>Deze maand nog geen inzendingen, <a href="https://buttondown.email/Kijkgat">schrijf je in</a> voor
                     onze nieuwsbrief om de volledige expo mee te krijgen.
-
             </div>
         </section>
     @endif
 
 
-    <section class="inzending">
+    <section class="inzending" @if($settings->third_color) style="background-color:{{$settings->third_color}}" @endif>
         <div class="inzending_box">
             <div>
                 <h2>DEEL JOUW VONDST*</h2>
@@ -124,9 +114,14 @@
                     <br><br>
                     *Tip: zorg ervoor dat je camera niet op het kaartje focust, maar op wat er door het gat te zien is.
                 </p>
+
+                <br>
+
+               <a href="/inzending" class="kijkgat">Deel jouw vondst</a>
+                
             </div>
 
-            <div class="form_box" id="submission_form">
+            <!-- <div class="form_box" id="submission_form">
 
 
                 @if (session()->has('message'))
@@ -160,60 +155,25 @@
                     </form>
                 @endif
             </div>
-        </div>
+        </div> -->
     </section>
 
     <section class="grey-matter">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+            @foreach ($masterpieces as $masterpiece)
                 <div class="swiper-slide">
-
-                    <h2>Meesterwerk van: Michelle uit Leeuwarden</h2>
-
+                    <h2>{{ $masterpiece->name }}</h2>
+                    <p>{{ $masterpiece->description }}</p>
                     <div class="swiper-content">
                         <div class="highlight_images_container">
-                            <img src="/assets/images/inzendingen/highlight.png" alt="highlight image" />
-                            <img src="/assets/images/inzendingen/highlight2.png" alt="highlight image" />
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="swiper-slide">
-                    <h2>Meesterwerk van: Tjerk uit Deventer</h2>
-
-                    <div class="swiper-content">
-                        <div class="highlight_images_container">
-                            <img src="/assets/images/inzendingen/1.png" alt="highlight image" />
-                            <img src="/assets/images/inzendingen/2.png" alt="highlight image" />
+                            <img src="storage/{{ $masterpiece->image }}" alt="highlight image" />
+                            <img src="storage/{{ $masterpiece->second_image }}" alt="highlight image" />
                         </div>
                     </div>
                 </div>
-
-                <div class="swiper-slide">
-                    <h2>Meesterwerk van: Allert uit Sjabbensville</h2>
-
-                    <div class="swiper-content">
-                        <div class="highlight_images_container">
-                            <img src="/assets/images/inzendingen/3.png" alt="highlight image" />
-                            <img src="/assets/images/inzendingen/4.png" alt="highlight image" />
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-slide">
-                    <h2>Meesterwerk van: Maren uit Deventer</h2>
-                    <div class="swiper-content">
-                        <div class="highlight_images_container">
-                            <img src="/assets/images/inzendingen/5.png" alt="highlight image" />
-                            <img src="/assets/images/inzendingen/5.png" alt="highlight image" />
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            @endforeach
         </div>
-
     </section>
 
     <section class="like_spinning_plates">
